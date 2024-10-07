@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800;900&display=swap');
+
+:root {
+  --font-montserrat: 'Montserrat';
+}
+
+* {
+  font-family: var(--font-montserrat);
+  font-size: 16px;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #F8F8F8;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90vw;
+  height: 80vh;
+  transform: translate(-50%, -50%);
+  background-color: #FFF;
+  padding: 2%;
+}
+
+canvas {
+  width: 90vw;
+  height: 70vh;
+  border: 1px solid #DDD;
+  background-color: #afdff5;
+  image-rendering: crisp-edges;
+}
+
+h2 {
+  font-family: var(--font-montserrat);
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+h2::before {
+  content: 'Catch ';
+  color: #FF0000;
+}
+
+h2::after {
+  color: #000000;
+}
+
+.hud {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 6px;
+}
+
+.hud > div {
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.hd > div:nth-child(1) {
+  font-family: var(--font-montserrat);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.hud > div:nth-child(1):before {
+  content: 'LEVEL ';
+  font-family: var(--font-montserrat);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.hud > div:nth-child(2):before {
+  content: 'Distance: ';
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.hud > div:nth-child(3):before {
+  content: 'Score: ';
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.hud > div:nth-child(1):after {
+  font-family: var(--font-montserrat);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+#game-over {
+  display: none;
+}
